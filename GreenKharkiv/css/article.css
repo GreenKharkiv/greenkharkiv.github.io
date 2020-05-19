@@ -1,0 +1,551 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+header{
+    background-color: #b3cd86;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+}
+/*Кнопка меню-гамбургер*/
+.menu__icon {
+    display: none;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.menu__icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+  }
+  
+  .menu__icon span:nth-child(4) {
+    top: 26px;
+}
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+  
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+}
+  
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+  
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+  
+.menu.menu_state_open .header-section {
+    display: block;  
+}
+/*_ _ _*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 70%;
+}
+#logo{
+    width: 40px;
+    margin-right: 12px;
+}
+#logoname{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 20pt;
+    font-weight: 500;
+    color: #ffffff;
+}
+#header-nav{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 2em;
+}
+#header-nav:hover{
+    color: #fac358;
+    transition: 300ms;
+    border-bottom: 1px solid #fac358;
+    padding-bottom: 5px;
+}
+main{
+    width: 60%;
+    order: 2;
+    box-sizing: border-box;
+}
+.cont-article{
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 8em;
+    margin-bottom: 5em;
+}
+.article{
+    margin:auto;
+    width: 80%;
+}
+.cont-article h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 18pt;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+}
+.cont-article h4{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+}
+.cont-article h5{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+}
+.cont-article p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: left;
+    color: #5b5b5c;
+}
+.cont-article img{
+    width: 100%;
+    margin: 1em auto;
+    margin-right: 0px;
+    box-sizing: border-box;
+}
+#list{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #5b5b5c;
+    padding: 0;
+    list-style-position: inside;
+}
+#list li{
+    font-weight: 500;
+}
+#list ol li{
+    font-weight: 400;
+}
+#list img{
+    width: 50%;
+}
+ol{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #5b5b5c;
+    padding: 0;
+    list-style-position: inside;
+}
+ol li{
+    padding-bottom: 2em;
+}
+.side1{
+    width: 15%;
+    order: 1;
+    box-sizing: border-box;
+    height: 10%;
+}
+.side2{
+    width: 20%;
+    order: 3;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px #eeeeee;
+    height: 60%;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    padding: 2em;
+}
+.side-menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.side-menu li{
+    border-bottom: 1px solid #fac358;
+    padding: 5px;
+}
+.side-menu a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: 400;
+    color: #5b5b5c;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+.side-menu a:hover{
+    color: #fac358;
+}
+.side2 h4{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: 500;
+    color: #5b5b5c;
+}
+.ftr-container{
+    display: flex;
+    height: 150px;
+    margin: 0 auto;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+}
+.ftr-container p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+#ftr-menu{
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+#ftr-menu li{
+    list-style-type: none;
+    padding: 0.5em;
+    display: inline-block;
+}
+.ftr{
+    background-color: #b3cd86;
+}
+/*Кнопка наверх */
+#top-btn {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #top-btn::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fac358;
+  }
+  #top-btn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+@media screen and (max-width: 1170px){
+    header{
+        height: 60px;
+    }
+    #logoname{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 30px;
+        margin-right: 10px;
+    }
+    /*
+    #header-nav{
+        font-size: 8pt;
+        font-weight: 400;
+        padding: 1em;
+    }
+    */
+    .menu__icon{
+        display: inline-block;
+    }
+    .header-section{
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 50px;
+        background-color: #b3cd86;
+        z-index: 1000;
+        overflow: auto;
+    }
+    #header-nav{
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 14pt;
+    }
+    .header-section{
+        display: none;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+    }
+    .cont-article p{
+        font-size: 12pt;
+    }
+    .cont-article img{
+        width: 80%;
+    }
+    .side2{
+        width: 25%;
+        height: 50%;
+        top: 60px;
+    }
+    .side-menu a{
+        font-size: 12pt;
+        line-height: 1.5em;
+    }
+    .side2 h4{
+        font-size: 14pt;
+    }
+}
+@media screen and (max-width: 960px){
+    header{
+        height: 60px;
+    }
+    #logoname{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 25px;
+        margin-right: 10px;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+    }
+    .cont-article p{
+        font-size: 12pt;
+    }
+    .cont-article img{
+        width: 80%;
+    }
+    .ftr-container{
+        height: 150px;
+        width: 100%;
+    }
+    #ftr-menu li a{
+        font-size: 14px;
+    }
+    main{
+        width: 100%;
+    }
+    .side2{
+        width: 60%;
+        height: 40%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .side-menu a{
+        font-size: 12pt;
+    }
+    .side2 h4{
+        font-size: 14pt;
+    }
+}
+@media screen and (max-width: 768px){
+    header{
+        height: 60px;
+    }
+    #logoname{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 35px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 12pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    main{
+        width: 100%;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+    }
+    .cont-article p{
+        font-size: 12pt;
+    }
+    .side1{
+        width: 0%;
+    }
+    .side2{
+        width: 40%;
+        height: 40%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 100px;
+        padding: 1em;
+    }
+    .side-menu a{
+        font-size: 12pt;
+    }
+    .side2 h4{
+        font-size: 14pt;
+    }
+    #ftr-menu li a{
+        font-size: 12px;
+    }
+    .ftr-container p{
+        font-size: 8pt;
+    }
+}
+@media screen and (max-width: 480px){
+    header{
+        height: 60px;
+    }
+    #logoname{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 30px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 12pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    main{
+        width: 100%;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+    }
+    .cont-article p{
+        font-size: 12pt;
+    }
+    .cont-article img{
+        width: 80%;
+    }
+    .side1{
+        width: 0%;
+    }
+    .side2{
+        width: 60%;
+        height: 40%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .side-menu a{
+        font-size: 12pt;
+    }
+    .side2 h4{
+        font-size: 14pt;
+    }
+    #ftr-menu li a{
+        font-size: 10px;
+    }
+    .ftr-container p{
+        font-size: 7pt;
+    }
+}
+@media screen and (max-width: 412px){
+    header{
+        height: 80px;
+    }
+    #logoname{
+        font-size: 11pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 20px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 12pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    main{
+        width: 100%;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+    }
+    .cont-article p{
+        font-size: 12pt;
+    }
+    .cont-article img{
+        width: 90%;
+    }
+    .side1{
+        width: 0%;
+    }
+    .side2{
+        width: 80%;
+        height: 40%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 100px;
+        padding: 0.5em;
+    }
+    .side-menu a{
+        font-size: 12pt;
+    }
+    .side2 h4{
+        font-size: 14pt;
+    }
+}

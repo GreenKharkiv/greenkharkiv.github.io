@@ -1,0 +1,516 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background: url(../img/bckg.jpg) no-repeat center top / cover;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 600px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 70%;
+}
+#logo{
+    width: 40px;
+    margin-right: 12px;
+}
+#logoname{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 20pt;
+    font-weight: 500;
+    color: #ffffff;
+}
+#header-nav{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 2em;
+}
+#header-nav:hover{
+    color: #fac358;
+    transition: 300ms;
+    border-bottom: 1px solid #fac358;
+    padding-bottom: 5px;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36pt;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5em;
+}
+#btn{
+    display: flex;
+    justify-content: center;
+}
+#btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    margin-top: 1.5em;
+}
+#btn a:hover{
+    color: #fac358;
+    border: 1px solid #fac358;
+    transition: 300ms;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+#tagline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 120px;
+    background-color: #fac358;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    margin: auto;
+    margin-top: -3em;
+    box-shadow: 0.1em 0.4em 30px #d1d1d1;
+}
+.slider{
+    margin-top: 4em;
+}
+#tagline2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 120px;
+    background-color: #fac358;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    margin: auto;
+    box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    margin-top: 1em;
+}
+.cont-article{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    margin: 4em auto;
+}
+.article{
+    margin: 1em auto;
+}
+.cont-article h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 600;
+    text-align: left;
+    color: #000000;
+}
+.cont-article p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: left;
+    color: #5b5b5c;
+}
+.cont-article img{
+    float: right;
+    margin-left: 1em;
+    width: 30%;
+}
+.btn{
+    display: flex;
+}
+.btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+    border: 1px solid #000000;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 1.5em;
+}
+.btn a:hover{
+    color: #ffffff;
+    background-color: #fac358;
+    border: 1px solid #fac358;
+    transition: 300ms;
+
+}
+.ftr-container{
+    display: flex;
+    height: 150px;
+    margin: 0 auto;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+}
+.ftr-container p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+#ftr-menu{
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+#ftr-menu li{
+    list-style-type: none;
+    padding: 0.5em;
+    display: inline-block;
+}
+.ftr{
+    background-color: #b3cd86;
+}
+/*Кнопка наверх */
+#top-btn {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#top-btn::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fac358;
+}
+#top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 1170px){
+    .container{
+        height: 400px;
+    }
+    h1{
+        font-size: 26pt;
+        font-weight: 700;
+    }
+    #logoname{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 30px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 10pt;
+        font-weight: 400;
+        padding: 1em;
+    }
+    #btn a{
+        font-size: 10pt;
+        font-weight: 400;
+        border: 1px solid #ffffff;
+        padding: 15px;
+        margin-top: 1.5em;
+    }
+    #tagline, #tagline2{
+        width: 65%;
+        height: 100px;
+        font-size: 14pt;
+        font-weight: 400;
+        box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+        font-weight: 600;
+    }
+    .cont-article p{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+    .btn a{
+        font-size: 10pt;
+        font-weight: 400;
+        border: 1px solid #000000;
+        padding: 10px;
+        margin-top: 1em;
+    }
+    .cont-article img{
+        float: right;
+        margin-left: 1em;
+        width: 40%;
+    }
+}
+@media screen and (max-width: 960px){
+    .container{
+        height: 350px;
+    }
+    h1{
+        font-size: 20pt;
+        font-weight: 700;
+    }
+    #logoname{
+        font-size: 12pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 25px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 8pt;
+    }
+    #btn a{
+        font-size: 10pt;
+        font-weight: 400;
+        border: 1px solid #ffffff;
+        padding: 15px;
+        margin-top: 1.5em;
+    }
+    #tagline, #tagline2{
+        width: 80%;
+        height: 80px;
+        font-size: 12pt;
+        font-weight: 400;
+        box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    }
+    .cont-article{
+        width: 80%;
+    }
+    .cont-article h3{
+        font-size: 14pt;
+        font-weight: 600;
+    }
+    .cont-article p{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+    .btn a{
+        font-size: 10pt;
+        font-weight: 400;
+        border: 1px solid #000000;
+        padding: 5px;
+        margin-top: 1em;
+    }
+    .cont-article img{
+        float: right;
+        margin-left: 1em;
+        width: 40%;
+    }
+    .ftr-container{
+        height: 150px;
+        width: 100%;
+    }
+    #ftr-menu li a{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        height: 250px;
+    }
+    h1{
+        font-size: 14pt;
+        font-weight: 700;
+    }
+    #logoname{
+        font-size: 12pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 20px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 6pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    #btn a{
+        font-size: 8pt;
+        font-weight: 400;
+        border: 1px solid #ffffff;
+        padding: 12px;
+        margin-top: 1em;
+    }
+    #tagline, #tagline2{
+        width: 90%;
+        height: 80px;
+        font-size: 12pt;
+        font-weight: 400;
+        box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    }
+    .cont-article{
+        width: 90%;
+    }
+    .cont-article h3{
+        font-size: 12pt;
+        font-weight: 600;
+    }
+    .cont-article p{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+    .btn a{
+        font-size: 8pt;
+        font-weight: 400;
+        border: 1px solid #000000;
+        padding: 4px;
+        margin-top: 0.5em;
+    }
+    .cont-article img{
+        float: right;
+        margin-left: 1em;
+        width: 50%;
+    }
+    #ftr-menu li a{
+        font-size: 12px;
+    }
+    .ftr-container p{
+        font-size: 8pt;
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 90%;
+        height: 250px;
+    }
+    h1{
+        font-size: 14pt;
+        font-weight: 700;
+    }
+    #logoname{
+        font-size: 8pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 12px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 5pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    #btn a{
+        font-size: 8pt;
+        font-weight: 400;
+        border: 1px solid #ffffff;
+        padding: 10px;
+        margin-top: 1em;
+    }
+    #tagline, #tagline2{
+        width: 90%;
+        height: 60px;
+        font-size: 10pt;
+        font-weight: 400;
+        box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    }
+    .cont-article h3{
+        font-size: 12pt;
+        font-weight: 600;
+    }
+    .cont-article p{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+    .btn a{
+        font-size: 12pt;
+        font-weight: 400;
+        border: 1px solid #000000;
+        padding: 3px;
+        margin-top: 1em;
+    }
+    .cont-article img{
+        float: right;
+        margin-left: 0.5em;
+        width: 0%;
+    }
+    #ftr-menu li a{
+        font-size: 10px;
+    }
+    .ftr-container p{
+        font-size: 7pt;
+    }
+}
+@media screen and (max-width: 412px){
+    .container{
+        width: 90%;
+        height: 150px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    #logoname{
+        font-size: 4pt;
+        font-weight: 500;
+    }
+    #logo{
+        width: 10px;
+        margin-right: 10px;
+    }
+    #header-nav{
+        font-size: 4pt;
+        font-weight: 400;
+        padding: 0.2em;
+    }
+    #btn a{
+        font-size: 5pt;
+        font-weight: 400;
+        border: 1px solid #ffffff;
+        padding: 6px;
+        margin-top: 1em;
+    }
+    #tagline, #tagline2{
+        width: 90%;
+        height: 50px;
+        font-size: 6pt;
+        font-weight: 400;
+        box-shadow: 0.1em 0.4em 30px #d1d1d1;
+    }
+}

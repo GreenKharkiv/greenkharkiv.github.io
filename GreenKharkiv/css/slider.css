@@ -1,0 +1,142 @@
+.slide--parent {
+  width: 1170px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.is-item--inner p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 16pt;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  line-height: 38pt;
+}
+
+.parent--el {
+  width: 80%;
+ 
+  margin: auto;
+}
+.parent--el .two--col {
+  display: flex;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+}
+
+.is-item {
+  width: 60%;
+}
+.is-item.has--img {
+  width: 70%;
+}
+
+.the-img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.the-img img {
+  width: 100%;
+}
+
+.is-item--inner {
+  padding: 0em 3em;
+}
+
+.the-img {
+  overflow: hidden;
+}
+.the-img img {
+  position: relative;
+  transform: translateX(100%);
+  transition: all 600ms ease;
+}
+
+.is-item--inner p {
+  transform: translateY(15px);
+  position: relative;
+  opacity: 0;
+  transition: all 400ms ease;
+}
+
+.parent--el.is-selected .the-img {
+  overflow: hidden;
+}
+.parent--el.is-selected .the-img img {
+  position: relative;
+  transform: translateX(0%);
+  transition-delay: 500ms;
+}
+.parent--el.is-selected .is-item--inner p {
+  transform: translateY(0px);
+  transition-delay: 500ms;
+  position: relative;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1170px){
+  .slide--parent {
+    width: 80%;
+  }
+  .is-item.has--img {
+    width: 60%;
+  }
+  .is-item--inner p{
+    font-size: 14pt;
+    line-height: 30pt;
+  }
+}
+@media screen and (max-width: 960px){
+  .is-item.has--img {
+    width: 50%;
+  }
+  .is-item--inner p{
+    font-size: 12pt;
+    line-height: 28pt;
+  }
+}
+@media screen and (max-width: 768px){
+  .is-item.has--img {
+    width: 50%;
+  }
+  .is-item--inner p{
+    font-size: 10pt;
+    line-height: 22pt;
+  }
+}
+@media screen and (max-width: 480px){
+  .is-item.has--img {
+    width: 50%;
+  }
+  .is-item--inner {
+    padding: 0em 1em;
+  }
+  .is-item--inner p{
+    font-size: 6pt;
+    line-height: 10pt;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 412px){
+  .is-item.has--img {
+    width: 50%;
+  }
+  .is-item--inner {
+    padding: 0em 1em;
+  }
+  .is-item--inner p{
+    font-size: 4pt;
+    line-height: 8pt;
+    font-weight: 400;
+    text-align: left;
+  }
+  .is-item--inner {
+    padding: 0em 1em;
+  }
+}
