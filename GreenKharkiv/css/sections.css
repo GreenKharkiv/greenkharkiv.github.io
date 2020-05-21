@@ -484,7 +484,7 @@ h3{
     h1{
         font-size: 14pt;
         font-weight: 700;
-        border-top: 0.5px solid #fac358;
+        border-top: 0px solid #fac358;
     }
     h3{
         font-size: 12pt;
@@ -499,7 +499,7 @@ h3{
         font-size: 12pt;
     }
     .about{
-        border-bottom: 0.5px solid #fac358;
+        border-bottom: 0px solid #fac358;
     }
     .cont-article h3{
         font-size: 10pt;
