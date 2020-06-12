@@ -142,6 +142,7 @@ main{
     font-weight: 400;
     text-align: justify;
     color: #5b5b5c;
+    line-height: 18pt;
 }
 .about img{
     float: left;
@@ -175,6 +176,7 @@ main{
     font-weight: 400;
     text-align: left;
     color: #5b5b5c;
+    line-height: 18pt;
 }
 .cont-article img{
     float: right;
