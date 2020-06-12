@@ -166,6 +166,7 @@ main{
     color: #5b5b5c;
     padding: 0;
     list-style-position: inside;
+    line-height: 18pt;
 }
 #list li{
     font-weight: 500;
@@ -183,6 +184,7 @@ ol{
     color: #5b5b5c;
     padding: 0;
     list-style-position: inside;
+    line-height: 18pt;
 }
 ol li{
     padding-bottom: 2em;
